@@ -1,0 +1,28 @@
+package main;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+import java.io.File;
+
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        Scene scene = new Scene(new MainWindow(primaryStage),800,550);
+        // scene.getStylesheets().add(getClass().getResource(".." + File.separator + "styles" + File.separator + "Style.css").toExternalForm());
+        primaryStage.setTitle("Encryption And Decryption Tool");
+        primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream(".." + File.separator + "images" + File.separator + "logo.png")));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+
+   
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
